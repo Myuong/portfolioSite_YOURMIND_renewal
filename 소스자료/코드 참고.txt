@@ -1,0 +1,7 @@
+
+헤더 비주얼
+header {
+    background:url(../img/manhattan-407703.jpg) no-repeat center -10%/cover;
+    height:550px;;
+}
+백그라운 이미지 +하이트고정 = 반응형이미지
