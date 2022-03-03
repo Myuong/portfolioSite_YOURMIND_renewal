@@ -9,7 +9,10 @@ var swiper = new Swiper(".visualSwiper", {
     },
 });
 
-
+//nav_tri 클릭시 aside메뉴 등장
+$('.nav_tri').click(function(){
+    $('.nav_aside').toggleClass('active');
+});
 
 // container2 tab
 $(".i_img_wrap:gt(0)").hide();
