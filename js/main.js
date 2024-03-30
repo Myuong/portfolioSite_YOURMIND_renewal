@@ -11,6 +11,7 @@ var swiper = new Swiper(".visualSwiper", {
 
 //nav_tri 클릭시 aside메뉴 등장
 $('.nav_tri').click(function(){
+    $('.nav_tri').toggleClass('open');
     $('.nav_aside').toggleClass('active');
 });
 

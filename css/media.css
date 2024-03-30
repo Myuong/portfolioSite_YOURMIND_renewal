@@ -18,9 +18,7 @@
 
 @media (max-width:1024px){
     .v_txtWrap h2 {font-size:38px;}
-    header {
-        z-index:102;
-    }
+    header {z-index:102;}
     .logo {margin-left:20px;}
     .nav_gnb{display:none;}
     .nav_log {display:none;}
@@ -30,30 +28,36 @@
         padding-top:20px;
         margin-right:20px;
     }
-    .nav_tri a {
+    .nav_tri {
         display: block;
         width: 32px;
         height: 32px;
-        position: relative; 
+        position: relative;
+        cursor: pointer;
     }
     .nav_tri span {
         position: absolute;
-        top: 50%;
-        left: 0;
         width: 100%;
         height: 2px;
         background:#111;
+        transition:.3s;
     }
-    .nav_tri span:before, .nav_tri span:after {
-        position: absolute;
-        display:block; 
-        content:''; 
-        background:#111;
-        width:100%; 
-        height:2px; 
+    .nav_tri span:nth-child(1) {top:5px;}
+    .nav_tri span:nth-child(2) {
+        top:50%;
+        transform: translateY(-50%);
     }
-    .nav_tri span:before {top:-9px;}
-    .nav_tri span:after {top:9px;}
+    .nav_tri span:nth-child(3) {bottom:5px;}
+
+    .nav_tri.open span:nth-child(1) {
+        transform: rotate(45deg);
+        margin-top:10px;
+    }
+    .nav_tri.open span:nth-child(2) {opacity:0;}
+    .nav_tri.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        margin-bottom:10px;
+    }
 
     .nav_aside {
         position:fixed;
@@ -130,9 +134,7 @@
         width:22px;
         height:2px;
     }
-    .aside_gnb_inner li .icon::before {
-        
-    }
+
     .aside_gnb_inner li .icon::after {
         transform:rotate(90deg);
         margin-top:-1.5px;
@@ -144,22 +146,29 @@
     font-size:2.5rem;
 }
 
+.sns_title {
+    margin-bottom:0;
+} 
+
+.sns_subTitle {
+    padding-bottom:2vh;
+}
+
 .b_title h3 {font-size:calc(17px + 1.2vw);}
 
 .bg_txt_wrap {width:80%;}
+
 }
-
-
 
 
 @media (max-width: 867px){
 
 header {height:60px;}    
-.logo {margin-top:10px; width:150px;}
+.logo {width:150px;}
 .nav_tri {padding-top:10px;}
 
 .nav_aside_wrap {
-    top:100px;
+    top:90px;
 }
 
 .topTitle {
@@ -210,7 +219,7 @@ header {height:60px;}
     top:0px;
     margin-top:0px;
 }
-.b_subt {font-size:20px;}
+.b_subt {font-size:1.25rem;}
 
 .tab_listWrap .tab_list {width:100%;}
 .tab_listWrap .tab {margin-top:40px;}
@@ -219,13 +228,17 @@ header {height:60px;}
     width: 50%;
 }
 
-.container4 {padding:1px 0 100px 0;}
+.container4 {
+    padding:1px 0 100px 0;
+}
+
 .img_wrap {
     width:calc(33.3% - 20px);
 }
-.sns_subTitle {
-    top: calc(-45px + 1vh);
-}
+
+.sns_title {
+    margin-bottom:0;
+} 
 
 .container5 {
     height:500px;
@@ -238,7 +251,6 @@ header {height:60px;}
 .bg_txt_wrap p {font-size:1.1rem;}
 
 }
-
 
 
 @media (max-width: 468px){
@@ -254,7 +266,6 @@ header {height:60px;}
         display:block;
         margin-bottom:10px;
     }
-
     .aside_gnb_inner li {
         padding:10px 0;
     }
@@ -312,6 +323,7 @@ header {height:60px;}
 .sns_subTitle {
     font-size:14px;
 }
+
 .sns_link a {font-size:13px;}
 
 .container5 {
