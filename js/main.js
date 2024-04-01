@@ -1,3 +1,13 @@
+
+//nav 스크롤
+$(window).scroll(function(){            
+    if($(window).scrollTop() > 900){       
+        $("#header_inner").addClass('on');
+    }else {
+        $("#header_inner").removeClass('on');
+    }
+});
+
 //비주얼 슬라이더
 var swiper = new Swiper(".visualSwiper", {
     pagination: {
